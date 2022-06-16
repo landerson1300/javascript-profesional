@@ -1,0 +1,65 @@
+<html><head>
+    <title>Scope</title>
+  <script async="" src="/cdn-cgi/bm/cv/669835187/api.js"></script></head>
+
+  <body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+
+    <script>
+      // Global Scope
+      // var message = 'Hello, Platzi!';
+      // var $ = function(message) {
+      //   console.log('Say: ' + message);
+      // };
+
+      // Function Scope
+      // function printNumbers() {
+      //   var i;
+      //   for (i = 0; i < 10; i++) {
+      //     function eventuallyPrintNumber(n) {
+      //       setTimeout(function() {
+      //         console.log(n);
+      //       }, 100);
+      //     }
+
+      //     eventuallyPrintNumber(i);
+      //   }
+      // }
+
+      // printNumbers();
+
+      // Block Scope
+      function printNumbers2() {
+        for (let i = 0; i < 10; i++) {
+          setTimeout(function() {
+            console.log(i);
+          }, 100);
+        }
+      }
+
+      printNumbers2();
+
+      // Module Scope
+    </script>
+  <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6fd9e291196aec3a',m:'cvPjsbNQAjSs_YNByiUwem58VkhqL.hjRlaCcz3Al7g-1650248046-0-AV5dmjedAdOV/a3EqDsBGbv3Cl9pJAyAYquSm6v82roRm8j5xl3MGqwohhzgwq/mDukl0p0iwZ6BiB9eqdiLe4AwsjeQ9k6PM+ZyDAPYj8tEzHNVy/yNj+718wxkw1eQ5tUk5LU2/UDVRnqSV0eXbUCnAAy2Tr2aZO7Nj5btKn5nv3WJypdANh+AKuUjPBKTFfR5TbOYZ8cMXBcrXQE5hE0=',s:[0x3202d2cb08,0x09795340c8],}})();</script>
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.6226104994317465', methodName, methodArgs }, 'https://static.platzi.com');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body></html>
